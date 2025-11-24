@@ -1,0 +1,13 @@
+SALES_QUERIES SQL
+create table sales_data(ProductID number(10),ProductName varchar(25),Price number(10),Quantity number(10));
+insert into sales_data values(1,'Laptop','30000','30')
+insert into sales_data values(2,'Printer','15000','30')
+insert into sales_data values(3,'Mouse','1000','30')
+insert into sales_data values(4,'Keyboard','2500','30')
+insert into sales_data values(5,'CPU','20000','30')
+insert into sales_data values(6,'Washing Machine','15000','10')
+insert into sales_data values(7,'AC','25000','25')
+insert into sales_data values(8,'Fridge','26000','35')
+insert into sales_data values(9,'TV','15000','30')
+select * from sales_data
+select productname,sum(Quantity)as Total_Quantity,sum(Quantity * Price)as Revenue from Sales_data group by productname
